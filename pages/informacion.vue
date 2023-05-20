@@ -25,7 +25,7 @@
           target="_blank"
           >Valerya</a
         >
-        que me dió la idea de crear esta pplataforma
+        que me dió la idea de crear esta plataforma
       </p>
       <p>
         Una gran ispiración fue el canal de
