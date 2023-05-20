@@ -23,7 +23,7 @@
           class="text-fuchsia-500"
           href="https://www.instagram.com/valerya.ortega/"
           target="_blank"
-          >Vale</a
+          >Valerya</a
         >
         que me dió la idea de crear esta pplataforma
       </p>
