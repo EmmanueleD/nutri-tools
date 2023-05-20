@@ -1,6 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: "NUTRI-TOOLS",
+      meta: [
+        {
+          name: "description",
+          content:
+            "NUTRI-TOOLS is a web platform that helps you run your nutrition dayly tasks",
+        },
+      ],
+    },
+  },
   modules: [
     "@nuxtjs/device",
     "@nuxtjs/tailwindcss",
