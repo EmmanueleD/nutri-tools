@@ -1,12 +1,12 @@
 <template>
   <div class="px-4 pt-2 pb-20">
-    <h1 class="mt-2 mb-4">Info</h1>
+    <h1 class="mt-2 mb-8">Info</h1>
 
     <div
-      class="card w-full md:w-4/5 lg:w-2/5 m-auto text-center p-4 bg-slate-50 rounded-lg"
+      class="card w-full md:w-4/5 lg:w-2/5 m-auto p-4 bg-slate-50 rounded-lg"
     >
       <span class="font-bold mb-2">Hola!</span>
-      <p class="mb-4">
+      <p>
         Soy Emmanuele! Esta pagina es para darte informacion sobre lo que podes
         encontrar acá
       </p>
@@ -14,7 +14,7 @@
         En especifico acá voy a estar publicando anuncios sobre las novedades
       </p>
       <p>Detalles sobre que formulas utilizé para las herramientas</p>
-      <p class="mb-4">y cualquier otra cosa que se me ocurra!</p>
+      <p class="mb-8">y cualquier otra cosa que se me ocurra!</p>
 
       <span class="font-bold mb-2">Agradecimientos e ispiración</span>
       <p>
@@ -41,7 +41,7 @@
         Vayan a visitar su canal, da muchisimos tutoriales sobre como crear
         excels utiles para la nutrición
       </p>
-      <p class="mb-4">
+      <p class="mb-8">
         En especifico para la pagina de la calculadora antropometrica (que por
         cierto, se le pueden agregar un montón de cosas más) este fue el
         <a

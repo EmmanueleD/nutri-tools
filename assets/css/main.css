@@ -25,6 +25,9 @@
   h6 {
     @apply text-sm font-bold;
   }
+  p {
+    @apply text-gray-600;
+  }
 }
 
 @layer components {
