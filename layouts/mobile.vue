@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col h-screen justify-between bg-hero-pattern">
+  <div
+    class="fixed top-0 flex flex-col h-screen justify-between bg-hero-pattern"
+  >
     <header
       class="header z-10 h-12 w-full flex justify-between px-3 py-2 bg-emerald-700 text-white"
     >
@@ -15,7 +17,7 @@
 
     <SidebarMenu></SidebarMenu>
     <div
-      class="content mb-auto p-2 mt-12 fixed top-0 right-0 h-full max-h-full overflow-y-scroll"
+      class="content mb-auto p-2 mt-12 fixed top-0 right-0 min-h-full max-h-full overflow-y-scroll"
       :style="{
         width: sidebarMenuOpen ? 'calc(100% - 20rem)' : 'calc(100% - 3.5rem)',
       }"
@@ -24,7 +26,7 @@
     </div>
 
     <footer
-      class="footer z-10 h-12 w-full flex justify-between p-2 bg-emerald-700 text-white text-xs"
+      class="footer fixed bottom-0 z-10 h-12 w-full flex justify-between p-2 bg-emerald-700 text-white text-xs"
     >
       <div class="flex items-center">
         <span>© 2023 Nutri-tools</span>
