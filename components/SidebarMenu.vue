@@ -1,7 +1,7 @@
 <template>
   <div
     class="fixed top-0 left-0 h-screen m-0 flex flex-col bg-emerald-900 text-white shadow-lg px-1 py-12 transition-all duration-150 ease-in-out"
-    :class="sidebarMenuOpen ? 'w-80' : 'w-14'"
+    :class="appState.sidebarMenuOpen ? 'w-80' : 'w-14'"
   >
     <div class="flex items-center justify-start">
       <div>
@@ -9,7 +9,7 @@
           @click="toggleIsOpen"
           name="fluent:panel-left-expand-16-filled"
           class="sidebar-icon transition-transform duration-500 ease-in-out"
-          :class="sidebarMenuOpen ? 'transform rotate-180' : ''"
+          :class="appState.sidebarMenuOpen ? 'transform rotate-180' : ''"
         ></Icon>
       </div>
     </div>
@@ -25,14 +25,14 @@
       :key="index"
       class="flex items-center justify-start group cursor-pointer"
       :class="
-        sidebarMenuOpen
+        appState.sidebarMenuOpen
           ? 'hover:bg-white hover:rounded-xl transition-all duration-150 ease-in-out'
           : ''
       "
     >
       <NuxtLink
         v-tooltip.right="{
-          value: sidebarMenuOpen
+          value: appState.sidebarMenuOpen
             ? ``
             : `<p class='text-white text-xs font-bold'>${tool.name}</p>`,
           escape: true,
@@ -44,14 +44,14 @@
           :name="tool.icon"
           class="sidebar-icon"
           :class="
-            sidebarMenuOpen
+            appState.sidebarMenuOpen
               ? 'mr-1 grow group-hover:text-emerald-900 group-hover:bg-white'
               : ''
           "
         />
 
         <div
-          v-if="sidebarMenuOpen"
+          v-if="appState.sidebarMenuOpen"
           class="text-xs text-white group-hover:text-gray-700"
         >
           {{ tool.name }}
@@ -62,11 +62,18 @@
 </template>
 
 <script setup>
+import { useAppState } from "~/stores/AppState"
+const appState = useAppState()
 const tools = [
   {
     icon: "mdi:information-variant-circle",
-    name: "Información",
+    name: "INFORMACIÓN",
     url: "/informacion",
+  },
+  {
+    icon: "uil:clipboard-notes",
+    name: "ANAMNESIS",
+    url: "/anamnesis",
   },
   {
     icon: "material-symbols:measuring-tape-rounded",
@@ -95,8 +102,7 @@ const tools = [
   },
 ]
 
-const sidebarMenuOpen = useSidebarMenuOpen()
 function toggleIsOpen() {
-  sidebarMenuOpen.value = !sidebarMenuOpen.value
+  appState.sidebarMenuOpen = !appState.sidebarMenuOpen
 }
 </script>

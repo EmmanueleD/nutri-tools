@@ -17,7 +17,9 @@
     <div
       class="content mb-auto p-2 mt-12 fixed top-0 right-0 h-full max-h-full overflow-y-scroll transition-all duration-150 ease-in-out"
       :style="{
-        width: sidebarMenuOpen ? 'calc(100% - 20rem)' : 'calc(100% - 3.5rem)',
+        width: appState.sidebarMenuOpen
+          ? 'calc(100% - 20rem)'
+          : 'calc(100% - 3.5rem)',
       }"
     >
       <slot />
@@ -43,9 +45,9 @@
 </template>
 
 <script setup>
+import { useAppState } from "~/stores/AppState"
+const appState = useAppState()
 function goto(url) {
   window.open(url, "_blank")
 }
-
-const sidebarMenuOpen = useSidebarMenuOpen()
 </script>

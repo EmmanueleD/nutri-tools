@@ -19,13 +19,14 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-icon",
     "@pinia/nuxt",
+    "@nuxtjs/supabase",
   ],
   device: {
     refreshOnResize: true,
   },
   css: [
     "~/assets/css/main.css",
-    "primevue/resources/themes/lara-light-blue/theme.css",
+    "~/assets/css/theme.css",
     "primevue/resources/primevue.css",
   ],
   postcss: {
