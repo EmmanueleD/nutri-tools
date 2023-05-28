@@ -21,16 +21,16 @@
             <span>Talla</span>
             <InputNumber
               v-model="patientData.dataCategories[0].items[2].value"
-              min-fraction-digits="2"
-              max-fraction-digits="2"
+              :min-fraction-digits="2"
+              :max-fraction-digits="2"
             ></InputNumber>
           </div>
           <div class="flex flex-col mb-3">
             <span>Peso</span>
             <InputNumber
               v-model="patientData.dataCategories[0].items[3].value"
-              min-fraction-digits="2"
-              max-fraction-digits="2"
+              :min-fraction-digits="2"
+              :max-fraction-digits="2"
             ></InputNumber>
           </div>
         </div>

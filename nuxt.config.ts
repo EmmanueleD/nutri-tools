@@ -3,16 +3,17 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "NUTRI-TOOLS",
+      title: "NUTRiHERR",
       meta: [
         {
           name: "description",
           content:
-            "NUTRI-TOOLS is a web platform that helps you run your nutrition dayly tasks",
+            "NUTRIHERR es un compendio online de herramientas utiles para nutricionistas y estudiantes de nutricion",
         },
       ],
     },
   },
+
   modules: [
     "@nuxtjs/device",
     "@nuxtjs/tailwindcss",
@@ -20,21 +21,28 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@pinia/nuxt",
     "@nuxtjs/supabase",
+    "@sfxcode/nuxt-primevue",
   ],
+
   device: {
     refreshOnResize: true,
   },
+
   css: [
     "~/assets/css/main.css",
-    "~/assets/css/theme.css",
+    "~/assets/css/emmd.css",
     "primevue/resources/primevue.css",
+    "~/assets/css/theme.css",
+    "primeicons/primeicons.css",
   ],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   googleFonts: {
     families: {
       Lexend: true,
@@ -43,7 +51,12 @@ export default defineNuxtConfig({
     display: "swap",
     subsets: "latin",
   },
+
   build: {
     transpile: ["primevue"],
+  },
+
+  devtools: {
+    enabled: true,
   },
 })

@@ -38,8 +38,8 @@
               <InputNumber
                 v-else
                 v-model="item.value"
-                min-fraction-digits="2"
-                max-fraction-digits="2"
+                :min-fraction-digits="2"
+                :max-fraction-digits="2"
               ></InputNumber>
             </div>
           </div>

@@ -28,6 +28,14 @@
   p {
     @apply text-gray-600;
   }
+  *::selection {
+    background: #1f9339;
+    color: white;
+  }
+  a::selection {
+    background: #064e3b;
+    color: #52fd77;
+  }
 }
 
 @layer components {
