@@ -1,17 +1,10 @@
-/* .formkit-outer {
-  width: fit-content !important;
-  font-size: 24px !important;
-  border: 1px solid greenyellow !important;
-  * {
-    border: 1px solid greenyellow !important;
+@tailwind components;
+
+@layer components {
+  .emmanuele {
+    border: 1px solid red;
   }
-}
-
-.formkit-inner {
-  width: auto !important;
-  border: 1px solid white !important;
-} */
-
-.emmanuele {
-  border: 1px solid red !important;
+  .emmd-card {
+    @apply relative bg-slate-50  shadow-lg rounded-lg;
+  }
 }

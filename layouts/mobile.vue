@@ -24,7 +24,7 @@
           : 'calc(100% - 3.5rem)',
       }"
     >
-      <slot />
+      <slot></slot>
     </div>
 
     <footer

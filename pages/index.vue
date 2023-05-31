@@ -1,8 +1,6 @@
 <template>
-  <div class="w-full h-full p-8">
-    <div
-      class="card w-full md:w-4/5 lg:w-2/5 m-auto p-4 bg-slate-50 rounded-lg"
-    >
+  <div class="w-full h-full p-8 placeholder:">
+    <div class="emmd-card w-full md:w-4/5 lg:w-2/5 m-auto p-4 rounded-lg">
       <p class="mb-8">¡Hey, nutricionista!</p>
       <p class="mb-8">
         Soy Emmanuele y quiero presentarte

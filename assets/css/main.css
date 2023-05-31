@@ -8,29 +8,29 @@
     font-size: 14px;
   }
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-3xl  font-black;
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-2xl  font-black;
   }
   h3 {
-    @apply text-xl font-bold;
+    @apply text-xl  font-extrabold;
   }
   h4 {
-    @apply text-lg font-bold;
+    @apply text-lg  font-extrabold;
   }
   h5 {
-    @apply text-base font-bold;
+    @apply text-base  font-bold;
   }
   h6 {
-    @apply text-sm font-bold;
+    @apply text-sm  font-bold;
   }
   p {
     @apply text-gray-600;
   }
   *::selection {
-    background: #1f9339;
-    color: white;
+    background: #dbe91f;
+    color: #064e3b;
   }
   a::selection {
     background: #064e3b;

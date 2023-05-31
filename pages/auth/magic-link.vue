@@ -1,10 +1,10 @@
 <template>
   <Toast position="bottom-center"></Toast>
   <div
-    class="min-h-screen -min-w-screen flex justify-center items-start text-white bg-gray-800 py-32"
+    class="min-h-screen min-w-screen flex justify-center items-start bg-hero-pattern py-32"
   >
     <div
-      class="w-4/5 md:w-2/3 max-w-2xl flex flex-col items-center bg-slate-900 px-6 pt-12 pb-24 rounded-lg"
+      class="emmd-card w-4/5 md:w-2/3 max-w-2xl flex flex-col items-center px-6 pt-12 pb-24"
     >
       <h1>ENTRA A NUTRIHERR</h1>
 
@@ -12,19 +12,21 @@
         <img class="w-full h-full" src="~/assets/images/logo.png" alt="" />
       </div>
 
-      <div v-if="!magicLinkSent">
-        <p class="text-white text-center mb-2">
+      <div v-if="userStore.userStatus == USER_STATUS.LOGGED_OUT">
+        {{ userStore.userStatus }}
+
+        <p class="text-center mb-2">
           Ingresar a tu cuenta NUTRIHERR es muy facil!
         </p>
 
-        <p class="text-white text-center mb-6">
+        <p class="text-center mb-6">
           Solo tienes que escribir tu mail y recibiras un
           <span class="font-bold">magic-link</span> que te permitirá el ingreso
           a la plataforma
         </p>
       </div>
-      <div v-else>
-        <p class="text-white text-center mb-2">
+      <div v-else-if="userStore.userStatus == USER_STATUS.MAGIC_LINK_SENT">
+        <p class="text-center mb-2">
           Revisa tu casilla de correo, te enviamos un
           <span class="font-bold">magic-link</span> que te permitirá el ingreso
           a la plataforma
@@ -32,7 +34,7 @@
       </div>
 
       <div
-        v-if="!magicLinkSent"
+        v-if="userStore.userStatus == USER_STATUS.LOGGED_OUT"
         class="w-full flex flex-col justify-center items-center gap-4 px-6"
       >
         <InputText
@@ -55,11 +57,14 @@
 
 <script setup>
 import { useToast } from "primevue/usetoast"
+import { useUserStore } from "~/stores/User.js"
+import { USER_STATUS } from "~/utils/constants"
+
+const userStore = useUserStore()
 const toast = useToast()
 const supabase = useSupabaseClient()
 
 const loading = ref(false)
-const magicLinkSent = ref(false)
 
 const email = ref("")
 
@@ -71,7 +76,7 @@ async function sendMagicLink() {
     if (error) {
       throw error
     } else {
-      magicLinkSent.value = true
+      userStore.setUserStatus(USER_STATUS.MAGIC_LINK_SENT)
       toast.add({
         severity: "success",
         summary: "Magic link enviado",

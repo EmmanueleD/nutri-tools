@@ -73,32 +73,32 @@ const tools = [
   {
     icon: "uil:clipboard-notes",
     name: "ANAMNESIS",
-    url: "/anamnesis",
+    url: "/tools/anamnesis",
   },
   {
     icon: "material-symbols:measuring-tape-rounded",
     name: "CALCULADORA ANTROPOMETRICA",
-    url: "/calculadora-antropometrica",
+    url: "/tools/calculadora-antropometrica",
   },
   {
     icon: "healthicons:weight",
     name: "CALCULADORA IMC",
-    url: "/calculadora-imc",
+    url: "/tools/calculadora-imc",
   },
   {
     icon: "bx:bxs-pie-chart-alt-2",
     name: "CALCULADORA DE MACRONUTRIENTES",
-    url: "/calculadora-macronutrientes",
+    url: "/tools/calculadora-macronutrientes",
   },
   {
     icon: "ic:round-energy-savings-leaf",
     name: "REQUERIMIENTOS ENERGETICOS",
-    url: "/calculadora-requerimientos-energeticos",
+    url: "/tools/calculadora-requerimientos-energeticos",
   },
   {
     icon: "mdi:food-apple",
     name: "LISTA DE ALIMENTOS",
-    url: "/lista-alimentos",
+    url: "/tools/lista-alimentos",
   },
 ]
 

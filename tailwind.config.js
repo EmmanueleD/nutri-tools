@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/assets/images/hero-pattern.svg')",
-        pattern: "url('/assets/images/pattern.svg')",
+        "dark-hero-pattern": "url('/assets/images/dark-hero-pattern.svg')",
       },
     },
     fontFamily: {
@@ -20,4 +20,5 @@ module.exports = {
     },
   },
   plugins: [],
+  darkMode: "class",
 }

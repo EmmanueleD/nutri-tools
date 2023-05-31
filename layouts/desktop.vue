@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen justify-between bg-hero-pattern">
+  <div class="flex flex-col h-screen w-screen justify-between bg-hero-pattern">
     <header
       class="header z-10 h-12 w-full flex justify-between px-3 py-2 bg-emerald-700 text-white"
     >
@@ -9,7 +9,7 @@
           src="../assets/images/logo.png"
           alt="logo nutri-tools"
         />
-        <span class="ml-4">NUTRI-TOOLS</span>
+        <span class="ml-4">NUTRI-TOOLS </span>
       </NuxtLink>
     </header>
 

@@ -2,10 +2,8 @@
   <div class="px-4 pt-2 pb-20">
     <h1 class="mt-2 mb-8">Info</h1>
 
-    <div
-      class="card w-full md:w-4/5 lg:w-2/5 m-auto p-4 bg-slate-50 rounded-lg"
-    >
-      <span class="font-bold mb-2">Hola!</span>
+    <div class="emmd-card w-full md:w-4/5 lg:w-2/5 m-auto p-4">
+      <h5 class="mb-2">Hola!</h5>
       <p>
         Soy Emmanuele! Esta pagina es para darte informacion sobre lo que podes
         encontrar acá
@@ -16,7 +14,7 @@
       <p>Detalles sobre que formulas utilizé para las herramientas</p>
       <p class="mb-8">y cualquier otra cosa que se me ocurra!</p>
 
-      <span class="font-bold mb-2">Agradecimientos e ispiración</span>
+      <h5 class="mb-2">Agradecimientos e ispiración</h5>
       <p>
         Un agradecimiento especial va a mi amiga
         <a
@@ -53,7 +51,7 @@
         del cual saqué las formulas
       </p>
 
-      <span class="font-bold mb-2">Contactos</span>
+      <h5 class="mb-2">Contactos</h5>
       <p>
         Sentite libre de escribir en el grupo
         <a
