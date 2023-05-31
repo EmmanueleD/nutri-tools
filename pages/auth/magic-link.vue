@@ -13,8 +13,6 @@
       </div>
 
       <div v-if="userStore.userStatus == USER_STATUS.LOGGED_OUT">
-        {{ userStore.userStatus }}
-
         <p class="text-center mb-2">
           Ingresar a tu cuenta NUTRIHERR es muy facil!
         </p>
